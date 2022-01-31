@@ -1,0 +1,308 @@
+/*Aplicando Grids + Responsive*/
+*{
+	margin: 0%;
+	padding: 0%;
+}
+body {
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+.border {
+    border: solid 1px #000;
+    background-color: #d3d3d3;
+}
+/*Estilos generales
+
+/*     Header      */
+.marginLogo {
+    margin-top: 15px;
+    margin-right: auto;
+    margin-bottom: 1px; 
+    margin-left: 30%;
+}
+ul a {
+    background-color: steelblue;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    text-decoration-line: none;
+}
+/*      Main      */
+.marginTitle {
+	margin-top: 15px;
+	margin-bottom: 15px; 
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+    color: darkblue;
+}  
+fieldset p {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 3%;
+}
+div fieldset h3 {
+    padding-top: 2%;
+}
+
+/*   Footer   */
+.backLightGreen {
+	background-color: lightgreen;
+}
+.paddingFooter {
+	padding: 2%;
+}
+.justifyContent {
+    text-align: right;
+}
+.vinetaFooter {
+	list-style-type: none;
+}
+.colorTextBlack {
+	color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+
+/*     Desktop   */
+
+@media (min-width: 1025px){  
+	#gridBlog {  display: grid;
+        grid-template-columns: 35% 1fr 1fr;
+        grid-template-rows: 120px 60px 0.5fr 0.3fr 0.1fr;
+        
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo1 menu1 menu1"
+          "title1 title1 title1"
+          "box1 box1 box1"
+          "box2 box2 box2"
+          "box3 box3 box3"
+          "footer1 footer1 footer1";
+      }
+      .logoGrid { grid-area: logo1; }
+      .menuGrid { grid-area: menu1; }
+      .title1Grid { grid-area: title1; }
+      .box1Grid { 
+		  	grid-area: box1; 
+			text-align: center;
+			align-content: center;
+			justify-content: center;
+			padding-top: 1%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 2%;
+	  }
+      .box2Grid { 
+            grid-area: box2; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 2%;
+      }
+      .box3Grid { 
+            grid-area: box3; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 10%;
+            margin-right: 10%;
+            margin-bottom: 2%;
+      }
+      .footerGrid { grid-area: footer1; }
+      
+	/* Cambios en Menu */
+	.marginListHeader {
+		margin-top: 45px;
+		padding-left: 20%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	/*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: space-evenly;
+        line-height: 35px;
+        text-align: center;
+    }
+}
+
+
+/*   Tablet    */
+
+@media (min-width: 480px) and (max-width:1024.9px){
+	#gridBlog {  display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 0.4fr 0.3fr 0.6fr 0.6fr 0.6fr 0.1fr;
+        
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo1"
+          "menu1"
+          "title1"
+          "box1"
+          "box2"
+          "box3"
+          "footer1";
+      }
+      .logoGrid { grid-area: logo1; }
+      .menuGrid { grid-area: menu1; }
+      .title1Grid { grid-area: title1; }
+      .box1Grid { 
+		  	grid-area: box1; 
+			text-align: center;
+			align-content: center;
+			justify-content: center;
+			padding-top: 1%;
+            margin-left: 8%;
+            margin-right: 8%;
+            margin-bottom: 2%;
+	  }
+      .box2Grid { 
+            grid-area: box2; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 8%;
+            margin-right: 8%;
+            margin-bottom: 2%;
+      }
+      .box3Grid { 
+            grid-area: box3; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 8%;
+            margin-right: 8%;
+            margin-bottom: 2%;
+      }
+      .footerGrid { grid-area: footer1; }
+
+    /*   Cambios en Logo  */
+	  .marginLogo {
+		margin-top: 15px;
+		margin-bottom: 1px;
+		padding-left: 8%;
+	}
+	/* Cambios en Menu */
+	.marginListHeader {
+		margin-top: 2%;
+        padding-bottom: 2%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	/*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: space-evenly;
+        line-height: 35px;
+        text-align: center;
+    }
+}
+
+/*   Mobile phone   */
+
+@media (min-width: 0px) and (max-width: 479.9px){
+	#gridBlog {  display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 120px 0.4fr 0.3fr 0.6fr 0.6fr 0.6fr 0.1fr;
+        
+        grid-auto-flow: row;
+        grid-template-areas:
+          "logo1"
+          "menu1"
+          "title1"
+          "box1"
+          "box2"
+          "box3"
+          "footer1";
+      }
+      .logoGrid { grid-area: logo1; }
+      .menuGrid { grid-area: menu1; }
+      .title1Grid { grid-area: title1; }
+      .box1Grid { 
+		  	grid-area: box1; 
+			text-align: center;
+			align-content: center;
+			justify-content: center;
+			padding-top: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+	  }
+      .box2Grid { 
+            grid-area: box2; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+      }
+      .box3Grid { 
+            grid-area: box3; 
+            text-align: center;
+            align-content: center;
+            justify-content: center;
+            padding-top: 1%;
+            margin-left: 5%;
+            margin-right: 5%;
+            margin-bottom: 2%;
+      }
+      .footerGrid { grid-area: footer1; }
+    /*   Cambios en Logo  */
+	  .marginLogo {
+		margin-top: 15px;
+		margin-bottom: 1px;
+		margin-left: auto;
+	}
+	/* Cambios en Menu */
+    .marginListHeader {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-between;
+        line-height: 35px;
+        text-align: center;
+    }
+	ul a {
+        background-color: steelblue;
+        border-radius: 5px;
+        color: white;
+        padding: 1px;
+        margin-top: 2%;
+        text-decoration-line: none;
+    }
+	/*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-self: center;
+        line-height: 35px;
+        text-align: center;
+    }
+}

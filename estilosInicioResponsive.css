@@ -1,0 +1,324 @@
+/*Aplicando Grids + Responsive*/
+*{
+	margin: 0%;
+	padding: 0%;
+}
+body {
+	font-family: 'Be Vietnam Pro', sans-serif;
+}
+.border {
+    
+    background-color: white;
+}
+/*Estilos generales
+
+/*     Header      */
+.marginLogo {
+    margin-top: 15px;
+    margin-right: auto;
+    margin-bottom: 1px; 
+    margin-left: 30%;
+}
+ul a {
+    background-color: steelblue;
+    border-radius: 4px;
+    color: white;
+    padding: 5px;
+    margin-right: 5px;
+    text-decoration-line: none;
+}
+/*      Main      */
+.marginTitle {
+	margin-top: 15px;
+	margin-bottom: 15px; 
+	margin-left: 10%;
+	margin-right: 10%;
+	text-align: center;
+    color: darkblue;
+}  
+.backgroundRoyalBlue {
+	background-color: steelblue;
+}
+.imgLocker{
+	background-image: url("../img/fondoLocker.jpg");
+	background-position: center top;
+	background-size: cover;
+}
+.interLine{
+    line-height: 1.8;
+}
+.imagePosition {
+	position: relative;
+	top: 2%; left: 25%;
+}
+
+/*   Footer   */
+.backLightGreen {
+	background-color: lightgreen;
+}
+.paddingFooter {
+	padding: 2%;
+}
+.justifyContent {
+    text-align: right;
+}
+.vinetaFooter {
+	list-style-type: none;
+}
+.colorTextBlack {
+	color: black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/* Desktop */
+
+@media (min-width: 1025px){
+     
+    #gridIndex {  display: grid;
+        grid-template-columns: 35% 1fr 1fr;
+        grid-template-rows: 120px 60px 450px 150px 180px 1fr;
+        grid-auto-columns: 1fr;
+       
+        grid-auto-flow: row;
+        grid-template-areas:
+        "logo1 menu1 menu1"
+        "title1 title1 title1"
+        "text1 text1 image1"
+        "text1 text1 image1"
+        "advantage1 advantage1 advantage1"
+        "footer1 footer1 footer1";
+    }
+    
+    .logoGrid { grid-area: logo1; }
+    .menuGrid { grid-area: menu1; }
+    .titleGrid { grid-area: title1; }
+    .textGrid { grid-area: text1; }
+    .imageGrid { grid-area: image1; }
+    .advantageGrid { grid-area: advantage1; }
+    .footerGrid { grid-area: footer1; }
+    
+    /* Cambios en Menu */
+    .marginListHeader {
+        margin: 35px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-betwxeen;
+        line-height: 25px;
+        text-align: center;
+    }
+    /*   Cambios en Text    */
+    .backSize {
+        height: 60vh;
+    }
+    h3 li{
+        list-style-type: disc;
+        color: beige;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .marginText {
+        padding-top: 15%;
+    }
+    /*   Cambios en Advantage    */
+    .advantageList-flex {
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        padding: 3%
+    }
+    /*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: space-evenly;
+        line-height: 35px;
+        text-align: center;
+    }  
+}
+
+
+/*   Tablet    */
+
+@media (min-width: 480px) and (max-width:1024.9px){
+      
+    #gridIndex {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 120px 60px 100px 450px 180px 1fr;
+        grid-auto-columns: 1fr;
+       
+        grid-auto-flow: row;
+        grid-template-areas:
+        "logo1 logo1" 
+        "menu1 menu1"
+        "title1 title1"
+        "text1 text1"
+        "advantage1 image1"
+        "advantage1 image1"
+        "footer1 footer1";
+    }
+    
+    .logoGrid { grid-area: logo1;}
+    .menuGrid { grid-area: menu1; }
+    .titleGrid { grid-area: title1; }
+    .textGrid { grid-area: text1; }
+    .imageGrid { grid-area: image1; }
+    .advantageGrid { grid-area: advantage1; }
+    .footerGrid { grid-area: footer1; }
+    
+    /*  Cambios en Logo   */
+    header {
+        text-align: center;
+        margin-left: 65%;
+    }
+    /* Cambios en Menu */
+    .marginListHeader {
+        margin-top: 2%;
+        padding-bottom: 4px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+    /*  Cambios en Image   */
+    .imagePosition {
+        position: relative;
+        top: 10%; left: 25%;
+        width: 50%; 
+        height: 80%;
+    }
+    /*   Cambios en Text    */
+    .backSize {
+        height: 80vh;
+    }
+    h3 li{
+        list-style-type: disc;
+        color: beige;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .marginText {
+        padding-top: 15%;
+    }
+    /*   Cambios en Advantage    */
+    .advantageList-flex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-content: center;
+        
+        padding-top: 2%;
+    }
+    div section article {
+        padding-top: 5%;
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 10%;
+        align-items: center;
+        justify-items: center;
+        row-gap: 10%;
+    }
+    /*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        margin-left: 65px;
+        display: flex;
+        flex-wrap: nowrap;
+        align-self: center;
+        justify-content: space-evenly;
+    }
+}
+
+/*     Mobile phone     */
+
+@media (min-width: 0px) and (max-width: 479.9px){
+
+    
+    #gridIndex {  display: grid;
+        grid-template-columns: 100% ;
+        grid-template-rows: 120px 245px 8% 450px 0.5fr 0.5fr;
+        grid-auto-columns: 1fr;
+       
+        grid-auto-flow: row;
+        grid-template-areas:
+        "logo1" 
+        "menu1"
+        "title1"
+        "text1"
+        "advantage1"
+        "footer1";
+    }
+    
+    .logoGrid { grid-area: logo1; }
+    .menuGrid { grid-area: menu1; }
+    .titleGrid { grid-area: title1; }
+    .textGrid { grid-area: text1; }
+    .imageGrid { grid-area: none; }
+    .advantageGrid { grid-area: advantage1; }
+    .footerGrid { grid-area: footer1; }
+    
+    /*   Cambios en Logo  */
+    .marginLogo {
+		margin-top: 15px;
+		margin-bottom: 1px;
+		margin-left: auto;
+	}
+    /* Cambios en Menu */
+    .marginListHeader {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-between;
+        line-height: 35px;
+        text-align: center;
+    }
+    ul a {
+        background-color: steelblue;
+        border-radius: 5px;
+        color: white;
+        padding: 1px;
+        margin-top: 2%;
+        text-decoration-line: none;
+    }
+    /*   Cambios en Text    */
+    .backSize {
+        height: 60vh;
+    }
+    h3 li{
+        list-style-type: disc;
+        color: beige;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .marginText {
+        padding-top: 15%;
+    }
+    /*   Cambios en Advantage    */
+    div section article {
+        padding: 5%
+    }
+    .advantageList-flex {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-top: 2%;
+    }
+
+    /*    Cambios en footer   */
+    .marginListFooter-flex {
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-self: center;
+        line-height: 35px;
+        text-align: center;
+    }
+}
